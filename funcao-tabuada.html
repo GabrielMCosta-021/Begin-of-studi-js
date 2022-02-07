@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+    <style>
+        #output{
+            width: 150px;
+            height: auto;
+            margin: 50px;
+            padding: 5px;
+
+            border: 1px dotted #000;
+
+            text-align: justify;
+        }
+    </style>
+
+<body>
+    
+    <h1>Funcao - tabuada</h1>
+
+    <button onclick="showTable()">Mostrar Tabuada</button>
+    
+    <button onclick="hiddenTable()">Limpar Tabuada</button>
+
+        <div id="output">
+                
+        </div>
+
+    <script>    
+
+        /*** MINHA VERSÃO ***/
+
+        const output = document.getElementById("output")
+               
+        // let s = ""
+        
+        // function showTable(){
+            
+        //     if(s != ""){
+        //         s = ""
+        //     }
+
+        //     let numberUser = prompt("Digite um número: ")
+        
+        //     number = Number(numberUser)
+
+        //     if(number == ""){
+        //         number += 0
+        //     }
+
+        //     for(let n = 0; n <= 10; n++){
+
+        //         s += `${number} x ${n} = ${number * n}  <br>`           
+            
+        //     }
+
+        //     output.innerHTML = s
+
+        // }
+
+        // function hiddenTable(){
+        //     if(s != ""){
+        //         s = ""
+        //     }
+        //     output.innerHTML = s
+        // }
+
+
+            /** VERSÃO DO PROFESSOR **/
+
+        // function showTable(){
+
+        //     //pedir para o usuário digitar um número
+        //     //toda informação que vem da interface do usuario é string
+        //     let n = parseFloat( prompt("Digite um número") )
+
+        //     let msg = ""
+        //     //mostrar a tabuada desse número de 1 a 1000
+        //     for(let i = 0; i <= 1000; i++){
+        //         msg += `${n} x ${i} = ${(n * i)} <br>`
+        //     }
+                    
+        //     output.innerHTML = msg   
+        
+        // }
+
+        // function hiddenTable(){
+        //     output.innerHTML = ""
+        // }
+
+
+        function showTable(){
+            
+            let n = parseFloat( prompt("Digite um número") )
+
+            let msg = ""
+            
+            for(let i = 0; i <= 1000; i++){
+                if(i === 10){
+                    // Return x Break
+                    //break                     Quando executado o Break faz o loop parar
+                    //return "Valor retornado"    Quando executado o return faz a função retornar um valor 
+                }
+                msg += `${n} x ${i} = ${(n * i)} <br>`
+            }
+                    
+            output.innerHTML = msg
+
+        }
+
+        function hiddenTable(){
+            output.innerHTML = ""
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops do While</title>
+</head>
+<body>
+    <h1>Loops</h1>
+
+
+    <script>
+        let number = prompt("Digite um número")
+
+         let indice = 0
+
+        while(indice <= 10){
+            indice++
+            if(indice === 5){
+                continue
+            }        
+            document.write(`${number} x ${indice} = ${(indice * number)} <br> <hr>`)
+        }
+        document.write(`Saiu do loop while <br> <hr>`)
+
+        // do{
+        //     if(number > 10){
+        //         alert("Indice maior que 10")
+        //         break     
+        //     }else{
+        //         document.write(`${number} x ${indice} = ${(indice * number)} <br> <hr>`)
+        //     }
+        // }while(indice <= 10)
+       
+        // document.write(`Saiu do loop Do While`)
+               
+        for(let j = 0; j <= 10;j ++){
+            if(j === 5){
+                document.write(`Número foi embora  <br> <hr>`)
+                continue
+            }
+            document.write(`${number} x ${j} = ${(j * number)} <br> <hr>`)
+        }
+        
+        document.write(`Saiu do loop for`)
+
+    </script>
+</body>
+</html>
